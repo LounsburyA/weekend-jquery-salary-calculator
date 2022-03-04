@@ -1,3 +1,8 @@
 console.log('js works');
-$(document).ready()
+$(readyNow);
 console.log('jquery');
+
+
+function readyNow() {
+    
+}
