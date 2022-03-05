@@ -5,27 +5,28 @@
     <link rel="stylesheet" href="style.css">
     <script src="jquery.js"></script>
     <script src="client.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salary Calculator</title>
 </head>
 <h1>Salary Calculator</h1>
 <h2>Add Employee</h2>
 <body>
     <div id="Input Field">
-      <input type= "tex" placeholder="FirstName" class="firstName">
-      <input type= "text" placeholder="LastName" class="lastName">
-      <input type= "number" placeholder="ID" class= "ID">
-      <input type="text" placeholder= "Title" Class="Title">
-      <input type="text" placeholder="Annual Salary" Class = "salary">
-      <button>Submit</button>
+      <input type= "tex" placeholder="First Name" class="firstName">
+      <input type= "text" placeholder="Last Name" class="lastName">
+      <input type= "number" placeholder="ID" class= "iD">
+      <input type="text" placeholder= "Title" Class="title">
+      <input type="number" placeholder="Annual Salary" Class = "annualSal">
+      <button id = "submitBtn">Submit</button>
     </div>
     <h2>Employees</h2>
-    <table>
+    <table class="table table-striped" id="table">
         <thead>
             <!-- THESE ARE THE COLUMNS -->
             <tr>
-                <th>First Name</th>
+                <th>Fi</th>
                 <th>Last Name</th>
                 <th>ID</th>
                 <th>Title</th>
@@ -34,9 +35,9 @@
         </thead>
         <tbody>
             <!-- THESE ARE THE ROWS -->
-            <tr>
-                <td>Andrew</td>
-                <td>Lounsbury</td>
+            <tr id = "inInputs">
+                <td></td>
+                <td></td>
                 <td></td>
             </tr>
             <tr>
@@ -45,7 +46,7 @@
             </tr>
         </tbody>
     </table>
-
+<h2 class = ></h2>
 
 </body>
 </html>
