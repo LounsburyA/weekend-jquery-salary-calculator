@@ -7,6 +7,8 @@ let monthlyTotal = 0;
 
 function readyNow() {
     $('#submitBtn').on('click',addEmp);
+    $('tbody').on('click', '.deleteBtn',deleteInput)
+    
 }
 
 
@@ -32,17 +34,27 @@ function addEmp() {
     $('.title').val('');
     $('.annualSal').val('');
      
-    let data=`<tr><td>`+firstName+`</td>`+
-    `<td>`+lastName+`</td>`+
-    `<td>`+iD+`</td>`+
-    `<td>`+title+`</td>`+
-    `<td>`+'$'+annualSal+`</td></tr>`;
+    let data=`<tr><td>${firstName}</td>
+    <td>${lastName}</td>
+    <td>${iD}</td>
+    <td>${title}</td>
+    <td>${annualSal}</td>
+    <td><button class = "deleteBtn" > Delete </button><td></tr>`;
+    //turnRed();
+
 $('#table').append(data);
 monthlyTotal += Math.floor(Number(annualSal)/12);
-$()
-
+$('.monthlyTotal').empty();
+$('.monthlyTotal').append('Total Monthly: '+ '$',monthlyTotal);
+turnRed();
 }
 
+function deleteInput() {
+$(this).closest('tr').empty();  
+}
 
-
-//$('#inInputs').append(`<td>${employeeInput.firstName}</td>`)  //test
+function turnRed() {
+    if(monthlyTotal > 20000){
+        $('.monthlyTotal').toggleClass('red');
+    } 
+}
