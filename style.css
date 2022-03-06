@@ -1,5 +1,12 @@
-.monthlyTotal{
+
+head{
+    background-color: blueviolet;
+}
+
+
+h3{
     text-align: center;
+
 }
 h1{
     text-align: center;
@@ -7,3 +14,4 @@ h1{
 .red{
     background-color: red;
 }
+{
