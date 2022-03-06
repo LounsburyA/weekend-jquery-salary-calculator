@@ -1,8 +1,4 @@
 
-head{
-    background-color: blueviolet;
-}
-
 
 h3{
     text-align: center;
@@ -14,4 +10,13 @@ h1{
 .red{
     background-color: red;
 }
-{
+
+body{
+    background-color: cornsilk;
+    margin: 15px;
+}
+h2 {
+background-color: lightslategray;
+color: white;
+
+}

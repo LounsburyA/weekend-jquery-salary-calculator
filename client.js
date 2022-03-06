@@ -6,8 +6,8 @@ let employeeInput= []
 let monthlyTotal = 0;
 
 function readyNow() {
-    $('#submitBtn').on('click',addEmp);
-    $('tbody').on('click', '.deleteBtn',deleteInput)
+    $('#submitBtn').on('click',addEmp);  // handles submitting employee info
+    $('tbody').on('click', '.deleteBtn',deleteInput)// handles removing employee from table
     
 }
 
@@ -26,13 +26,13 @@ function addEmp() {
         iD: iD,
         title: title,
         annualSal: annualSal
-    }
+    }  // creates employee object // allows to enter in the inputs
     employeeInput.push(employeeObject);
     $('.firstName').val('');
     $('.lastName').val('');
     $('.iD').val('');
     $('.title').val('');
-    $('.annualSal').val('');
+    $('.annualSal').val('');// these empty inputs
      
     let data=`<tr><td>${firstName}</td>
     <td>${lastName}</td>
@@ -40,21 +40,25 @@ function addEmp() {
     <td>${title}</td>
     <td>${annualSal}</td>
     <td><button class = "deleteBtn" > Delete </button><td></tr>`;
-    //turnRed();
+    //
 
 $('#table').append(data);
+// sends inputs to the table on DOM
+
 monthlyTotal += Math.floor(Number(annualSal)/12);
 $('.monthlyTotal').empty();
-$('.monthlyTotal').append('Total Monthly: '+ '$',monthlyTotal);
+$('.monthlyTotal').append(monthlyTotal);
 turnRed();
-}
-
+}// calculates monthly cost of employee adds to monthly total
+// displays monthly total
 function deleteInput() {
 $(this).closest('tr').empty();  
 }
-
+// removes employee from table
 function turnRed() {
     if(monthlyTotal > 20000){
         $('.monthlyTotal').toggleClass('red');
     } 
-}
+}// turns background red if monthly total is greater than 20,000
+
+//'Total Monthly: '+ '$',
