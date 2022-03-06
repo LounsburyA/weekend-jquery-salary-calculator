@@ -1,12 +1,12 @@
 # Project Name
  Salary Calculator
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
 ## Description
 
 This project was to create  an application that records employee salaries and adds salaries per month up to report monthly costs. 
 The application needed to take in employee information and store/display it in a table.
 Employee information inputs:
+
 -First Name
 -Last Name
 -ID number
@@ -24,4 +24,3 @@ A button to delete employee information from the table was also created.  This r
 Finally a function was created that would turn the total monthly background red if it was in excess of 20,000.
 
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
